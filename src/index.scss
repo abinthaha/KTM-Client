@@ -1,0 +1,46 @@
+@import './assets//scss/variables';
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html, body, .App {
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 30px;
+    padding: 15px;
+    display: flex;
+    height: 60px;
+    margin: 0;
+    align-items: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 1px solid $ktm_yellow;
+    outline: none;
+    box-shadow: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &.btn-primary {
+        background-color: $ktm_yellow;
+
+        &:hover {
+            border-color: #9e710f;
+            background-color: #9e710f;
+        }
+    }
+
+    &.btn-secondary {
+        color: $ktm_yellow;
+
+        &:hover {
+            background-color: #5d5d69;
+        }
+    }
+}

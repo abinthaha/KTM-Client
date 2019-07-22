@@ -1,0 +1,18 @@
+#map {
+    height: 500px;
+}
+
+#info-window-content {
+    min-width: 250px;
+
+    label {
+        width: 40%;
+        display: inline-block;
+        text-align: right;
+
+        &:after {
+            content: ':';
+            margin: 0 10px;
+        }
+    }
+}

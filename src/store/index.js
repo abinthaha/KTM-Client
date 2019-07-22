@@ -5,17 +5,13 @@ import {
 } from 'redux';
 import reducer from './reducer';
 import logger from './logger';
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
+import apiMiddleware from "../api/index";
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const enhancer = composeEnhancers(
-    applyMiddleware(logger, thunk),
-);
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
     reducer,
-    enhancer
+    composeEnhancer(applyMiddleware(thunk, logger, apiMiddleware)),
 );
-
 export default store;

@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px 0;
+
+    td,
+    th {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 5px;
+    }
+}
+
+tbody {
+    display: block;
+    height: 200px;
+    overflow: hidden auto;
+}
+
+thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    /* even columns width , fix width of table too*/
+}
+
+thead {
+    width: calc(100% - 1em)
+        /* scrollbar is average 1em/16px width, remove it from thead width */
+}
+
+.btn-primary {
+    margin: 0 10px;
+}

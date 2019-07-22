@@ -53,7 +53,6 @@ class RegisterComponent extends React.Component {
     }
 
     deleteUser(data) {
-        debugger;
         axios.delete('http://localhost:5000/api/users', data)
         .then(response => {
             this.fetchUserList();
